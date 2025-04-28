@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Losowanie Opinii</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Losowanie Opinii</h1>
+        
+        <div class="file-upload-container">
+            <label for="file-upload" class="custom-file-upload">
+                <span class="upload-icon">📁</span> Wybierz plik z opiniami
+            </label>
+            <input type="file" id="file-upload" accept=".txt">
+            <p id="file-name">Nie wybrano pliku</p>
+        </div>
+
+        <div class="opinion-container">
+            <div id="opinion-display">
+                <p class="placeholder">Tutaj pojawi się wylosowana opinia</p>
+            </div>
+            <button id="draw-button" disabled>Losuj opinię</button>
+        </div>
+
+        <div class="info-container">
+            <p id="opinions-count">Liczba opinii: 0</p>
+            <p id="current-opinion">Opinia nr: -</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Aplikacja do losowania opinii &copy; 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
