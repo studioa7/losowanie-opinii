@@ -10,6 +10,7 @@ Aplikacja webowa do losowania opinii z predefiniowanej listy oraz wystawiania ic
 - [Użytkowanie](#użytkowanie)
 - [Struktura projektu](#struktura-projektu)
 - [Technologie](#technologie)
+- [Autor](#autor)
 
 ## Opis
 
@@ -94,6 +95,28 @@ Po wybraniu opinii, pojawią się przyciski do wystawiania opinii na platformach
 - localStorage API
 - Clipboard API
 
+## Autor
+
+Aplikacja została stworzona przez [Studio A7](https://studioa7.pl) - kreatywną agencję cyfrową specjalizującą się w projektowaniu stron WWW, pozycjonowaniu, kampaniach Google Ads i marketingu w mediach społecznościowych.
+
+### Dane kontaktowe
+
+- **Strona WWW**: [https://studioa7.pl](https://studioa7.pl)
+- **Email**: kontakt@studioa7.pl
+- **Telefon**: 733 029 999
+- **Adres**: Hokejowa 19/15, 80-180 Gdańsk
+
+### Media społecznościowe
+
+- [Facebook](https://www.facebook.com/studioa7pl)
+- [Instagram](https://www.instagram.com/studioa7pl/)
+- [LinkedIn](https://www.linkedin.com/company/17915486)
+- [YouTube](https://www.youtube.com/@studioa7)
+- [TikTok](https://www.tiktok.com/@studioa7pl)
+- [X (Twitter)](https://x.com/studioa7pl)
+- [Pinterest](https://pl.pinterest.com/studioa7)
+- [Threads](https://www.threads.net/@studioa7pl)
+
 ---
 
-© 2025 | Studio A7
+© 2025 | Studio A7 | [https://studioa7.pl](https://studioa7.pl)
