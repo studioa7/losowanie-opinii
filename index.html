@@ -3,36 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Losowanie Opinii</title>
+    <title>Losowanie Opinii X</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Losowanie Opinii</h1>
+        <header>
+            <h1>Losowanie Opinii X</h1>
+        </header>
         
-        <div class="file-upload-container">
-            <label for="file-upload" class="custom-file-upload">
-                <span class="upload-icon">📁</span> Wybierz plik z opiniami
-            </label>
-            <input type="file" id="file-upload" accept=".txt">
-            <p id="file-name">Nie wybrano pliku</p>
-        </div>
-
-        <div class="opinion-container">
-            <div id="opinion-display">
-                <p class="placeholder">Tutaj pojawi się wylosowana opinia</p>
+        <main>
+            <div class="opinion-container">
+                <div id="opinion-display">
+                    <p class="placeholder">Tutaj pojawi się wylosowana opinia</p>
+                </div>
+                
+                <div class="buttons-container">
+                    <button id="draw-button">Losuj opinię</button>
+                    <button id="select-button" disabled>Wybierz opinię</button>
+                </div>
+                
+                <!-- Nowe przyciski do wystawiania opinii na platformach -->
+                <div class="platform-buttons-container" style="display: none;">
+                    <h3>Wystaw opinię na platformie:</h3>
+                    <div class="platform-buttons">
+                        <button id="google-button" class="platform-button">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button id="trustindex-button" class="platform-button">
+                            <i class="fas fa-star"></i> Trustindex
+                        </button>
+                        <button id="facebook-button" class="platform-button">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="confirmation-modal" class="modal">
+                    <div class="modal-content">
+                        <h2>Potwierdzenie wyboru</h2>
+                        <p>Czy na pewno chcesz wybrać tę opinię?</p>
+                        <p class="selected-opinion"></p>
+                        <div class="modal-buttons">
+                            <button id="confirm-button">Tak, wybierz</button>
+                            <button id="cancel-button">Anuluj</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <button id="draw-button" disabled>Losuj opinię</button>
-        </div>
 
-        <div class="info-container">
-            <p id="opinions-count">Liczba opinii: 0</p>
-            <p id="current-opinion">Opinia nr: -</p>
+            <div class="info-container">
+                <p id="opinions-count">Liczba dostępnych opinii: <span>20</span></p>
+                <p id="used-opinions-count">Liczba wykorzystanych opinii: <span>0</span></p>
+            </div>
+            
+            <div class="opinions-list-container">
+                <h2>Lista dostępnych opinii</h2>
+                <ul id="opinions-list"></ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Panel administracyjny -->
+    <div id="admin-panel-toggle">
+        <button id="admin-toggle-button">
+            <i class="fas fa-cog"></i> Panel Administratora
+        </button>
+    </div>
+
+    <div id="admin-panel" class="modal">
+        <div class="modal-content admin-panel-content">
+            <h2>Panel Administratora</h2>
+            <p>Ustaw adresy URL platform do wystawiania opinii:</p>
+            
+            <div class="admin-form">
+                <div class="form-group">
+                    <label for="google-url">
+                        <i class="fab fa-google"></i> Google URL:
+                    </label>
+                    <input type="text" id="google-url" placeholder="https://www.google.com/maps/place/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="trustindex-url">
+                        <i class="fas fa-star"></i> Trustindex URL:
+                    </label>
+                    <input type="text" id="trustindex-url" placeholder="https://www.trustindex.io/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="facebook-url">
+                        <i class="fab fa-facebook"></i> Facebook URL:
+                    </label>
+                    <input type="text" id="facebook-url" placeholder="https://www.facebook.com/...">
+                </div>
+                
+                <div class="admin-buttons">
+                    <button id="admin-save-button">Zapisz</button>
+                    <button id="admin-close-button">Zamknij</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>Aplikacja do losowania opinii &copy; 2025</p>
+        <p>Aplikacja do losowania opinii &copy; 2025 | Studio A7</p>
     </footer>
 
     <script src="script.js"></script>
